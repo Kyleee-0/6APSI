@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate('/landing');
+  };
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -17,7 +24,9 @@ function LoginPage() {
         <h2>Login</h2>
         <input type="text" placeholder="Username" style={{ display: 'block', margin: '10px auto' }} /><br />
         <input type="password" placeholder="Password" style={{ display: 'block', margin: '10px auto' }} /><br />
-        <button style={{ marginTop: '10px' }}>Login</button>
+        <button style={{ marginTop: '10px' }} onClick={handleLogin}>
+          Login
+        </button>
       </div>
     </div>
   );
