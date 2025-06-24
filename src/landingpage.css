@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(135deg, #4e73df, #1cc88a); 
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+
+.landing-box {
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  max-width: 600px; 
+  width: 100%;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.landing-box h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.landing-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: #1c7bc8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.landing-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.landing-btn:active {
+  transform: translateY(1px); 
+}
+
+.landing-box {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

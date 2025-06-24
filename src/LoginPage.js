@@ -1,30 +1,24 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './loginpage.css'; 
 
 function LoginPage() {
+   /* FOR FUTURE PURPOSES
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  /*
+  const handlelanding = () => {
     navigate('/landing');
   };
+   */
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh' 
-    }}>
-      <div style={{ 
-        padding: '20px', 
-        border: '5px solid #ccc', 
-        borderRadius: '5px', 
-        textAlign: 'center' 
-      }}>
+    <div className="login-container">
+      <div className="login-box">
         <h2>Login</h2>
-        <input type="text" placeholder="Username" style={{ display: 'block', margin: '10px auto' }} /><br />
-        <input type="password" placeholder="Password" style={{ display: 'block', margin: '10px auto' }} /><br />
-        <button style={{ marginTop: '10px' }} onClick={handleLogin}>
+        <input type="text" placeholder="Username" className="input-field" /><br />
+        <input type="password" placeholder="Password" className="input-field" /><br />
+        <button className="login-btn">
           Login
         </button>
       </div>

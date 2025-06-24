@@ -1,21 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './landingpage.css'; 
 
 function LandingPage() {
+  const navigate = useNavigate();
+
+  const handlelanding = () => {
+    navigate('/login');
+  };
+  
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh' 
-    }}>
-      <div style={{ 
-        padding: '20px', 
-        border: '1px solid #ccc', 
-        borderRadius: '5px', 
-        textAlign: 'center' 
-      }}>
-        <h1>Welcome, Kyle Eurie Gulapa!</h1>
-        <p>From CS-401</p>
+    <div className="landing-container">
+      <div className="landing-box">
+        <h1>6APSI</h1>
+        <h1>Welcome, User!</h1>
+        <button className="landing-btn" onClick={handlelanding}>
+          Click here to login!
+        </button>
       </div>
     </div>
   );
